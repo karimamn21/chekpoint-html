@@ -1,0 +1,19 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # replace with your branch name
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build and deploy
+        run: |
+          git checkout main  # replace with your branch name
+          # Add any build commands here if required
+          git push origin main  # replace with your branch name
